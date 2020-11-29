@@ -11,7 +11,7 @@ echo "The gpu device capability: "
 /usr/local/cuda/samples/bin/x86_64/linux/release/deviceQuery | grep "Major/Minor"
 echo "Please change the -arch parameter in the following line according to the Major and Minor value of cap."
 rm src/my_lib_kernel.o
-nvcc -c -o src/my_lib_kernel.o  src/my_lib_kernel.cu --verbose  -g -x cu -Xcompiler -fPIC -arch=sm_61 -lineinfo
+nvcc -c -o src/my_lib_kernel.o  src/my_lib_kernel.cu --verbose  -g -x cu -Xcompiler -fPIC -arch=sm_30 -lineinfo
 
 python build.py
 
